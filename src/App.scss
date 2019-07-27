@@ -1,0 +1,175 @@
+@import './styles/colors.scss';
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    background: $_shark;
+
+}
+
+.App {
+    display       : flex;
+    flex-direction: column;
+
+    .banner-top {
+        width  : 100%;
+        display: flex;
+
+        .logo {
+            z-index   : 2;
+            padding   : .5rem;
+            width     : 2.5%;
+            border    : 2px solid darken($_shark, 2%);
+            box-shadow: 4px -3px 5px rgba(0, 0, 0, .4);
+
+            &:hover {
+                background: radial-gradient($lambda_orange 18%, darken($_shark, 2%),$_shark, $_shark);
+            }
+        }
+
+
+        .top-bar {
+            width         : 97%;
+            padding-top   : 1rem;
+            display       : flex;
+            flex-direction: row-reverse;
+            background    : $_lite_shark;
+            box-shadow    : inset -4px -3px 5px rgba(0, 0, 0, .4);
+            max-height    : 2rem;
+            border-right  : 2px solid $_shark;
+
+            .btn {
+                width                  : 100%;
+                height                 : 100%;
+                margin                 : 0 10px;
+                width                  : 100px;
+                text-align             : center;
+                border-top-left-radius : 10px;
+                border-top-right-radius: 10px;
+                box-shadow             : 2px -2px 5px rgba(0, 0, 0, .4);
+                border-bottom          : 1px dashed darken($_shark, 1%);
+
+            }
+
+        }
+
+    }
+
+    .middle {
+        z-index: 0;
+        display: flex;
+
+        .side-bar {
+            width         : 2.8%;
+            padding-left  : 10px;
+            padding-top   : 10px;
+            padding-bottom: 10px;
+            background    : $_lite_shark;
+            box-shadow    : inset -3px 4px 5px rgba(0, 0, 0, .4);
+
+            .btn {
+                margin                   : 0 0 10px 0;
+                height                   : 80px;
+                border-top-left-radius   : 10px;
+                border-bottom-left-radius: 10px;
+                box-shadow               : -2px 2px 5px rgba(0, 0, 0, .4);
+                border-right             : 1px dashed darken($_shark, 1%);
+                border-top: 3px solid $_shark;
+                user-select: none;
+                .txt {
+                    transform: rotate(-90deg);
+                    position : relative;
+                    top      : 20px;
+
+                }
+
+                .html {
+                    top: 30px;
+
+                }
+
+                .preview {
+                    top: 40px;
+                }
+                &:hover{
+                    border-top: 3px solid darken($_shark, 2%);
+                }
+
+                
+            }
+
+            .flipped {
+
+                transform : rotate(180deg);
+                position  : relative;
+                left      : 38px;
+                box-shadow: -2px -2px 5px rgba(0, 0, 0, .4);
+                border-top: 3px solid $lambda_orange;
+                &:hover{
+                    border-top: 3px solid darken($lambda_orange, 2%);
+                }
+
+            }
+
+            .preview- {
+                margin-top   : 14rem;
+                margin-bottom: 0px;
+            }
+        }
+
+        .preview-window {
+            display: none;
+            width  : 97%;
+            border : none;
+        }
+    }
+
+    .banner-bottom {
+        width     : 100%;
+        height    : 3%;
+        position  : fixed;
+        bottom    : 0;
+        background: $_lite_shark;
+    }
+}
+
+.btn {
+    background: $_shark;
+    cursor    : pointer;
+
+    &:hover {
+        background: darken($_shark, 2%);
+        
+
+        .txt {
+
+            color: $lambda_orange;
+        }
+
+    }
+}
+
+
+.txt {
+    color      : $_lavander;
+    font-weight: bold;
+  
+
+}
+
+/* ::COLORS_KEY::{
+    @pale-blue-magenta: #BB86FC;
+    @deep-purple      : #3700b3;
+    @vivid-cyan       : #03DAC6 ;
+
+    @blue_90: #ccd9ff;
+    @blue_70: #353844;
+
+    @blue_50: #1a1b1f;
+
+    @blue_30: #1d1e22;
+    @blue_10: #1e1f26;
+  } */
