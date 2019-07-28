@@ -1,0 +1,63 @@
+.side-bar {
+    width         : 2.8%;
+    padding-left  : 10px;
+    padding-top   : 10px;
+    padding-bottom: 10px;
+    background    : $_lite_shark;
+    box-shadow    : inset -3px 4px 5px rgba(0, 0, 0, .4);
+
+    .btn {
+        margin                   : 0 0 10px 0;
+        height                   : 80px;
+        border-top-left-radius   : 10px;
+        border-bottom-left-radius: 10px;
+        box-shadow               : -2px 2px 5px rgba(0, 0, 0, .4);
+        border-right             : 1px dashed darken($_shark, 1%);
+        border-top               : 3px solid $_shark;
+        user-select              : none;
+
+        .txt {
+            transform: rotate(-90deg);
+            position : relative;
+            top      : 20px;
+
+        }
+
+        .html {
+            top: 30px;
+
+        }
+
+        .preview {
+            top: 40px;
+        }
+
+        &:hover {
+            border-top: 3px solid darken($_shark, 2%);
+        }
+
+
+    }
+
+    .pressed {
+
+        transform : rotate(180deg);
+        position  : relative;
+        left      : 38px;
+        box-shadow: -2px -2px 5px rgba(0, 0, 0, .4);
+        border-top: 3px solid $lambda_orange;
+
+        &:hover {
+            border-top: 3px solid darken($lambda_orange, 2%);
+        }
+
+    }
+
+    .preview- {
+        margin-top   : 14rem;
+        margin-bottom: 0px;
+    }
+
+    
+}
+

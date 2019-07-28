@@ -1,0 +1,7 @@
+.drawer-handle {
+    width  : 20px;
+    height: 610px;
+    box-shadow: 3px 0px 5px rgba(0,0,0,.4);
+    border:2px solid darken($_lite_shark,1%);
+    background:lighten($_lite_shark,1%);
+}

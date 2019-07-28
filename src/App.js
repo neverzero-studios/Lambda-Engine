@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import Topbar from "./components/Topbar";
 import Logo from "./components/Logo";
 import Sidebar from "./components/Sidebar";
-import PreviewWindow from "./components/PreviewWindow";
+import DrawerHandle from "./components/DrawerHandle";
+import EditorDrawer from "./components/EditorDrawer";
+
 function App() {
   return (
     <div className="App">
@@ -13,7 +15,7 @@ function App() {
       </div>
       <div className="middle">
         <Sidebar />
-        <PreviewWindow />
+        <EditorDrawer />
       </div>
       <div className="banner-bottom" />
     </div>
@@ -25,12 +27,13 @@ export default App;
   
   <body/>
     <nav-bar> [ [X] WORKING]  [ [] DONE]
+    // TOMORROW <------||
     <editor>  [ [] WORKING]  [ [] DONE]
-      --toggle buttons  [ [] WORKING]  [ [] DONE]
+      --toggle buttons  [ [X] WORKING]  [ [] DONE]
       --code areas {HTML, CSS, JS}  [ [] WORKING]  [ [] DONE]
       --expand draggable  [ [] WORKING]  [ [] DONE]
-      --tools    [ [] WORKING]  [ [] DONE]
-    <preview> // TOMORROW <------||
+      --tools    [ [X] WORKING]  [ [] DONE]
+    <preview> 
 
 
 */

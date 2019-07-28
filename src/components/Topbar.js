@@ -1,8 +1,6 @@
 import React from "react";
 import Button from "./Button";
 
-
-
 const Topbar = (props) => {
   return (
     <div className={props.panelName}>
@@ -13,6 +11,4 @@ const Topbar = (props) => {
   )
 };
 
-// public\logo.png
-// src\components\Topbar.js
 export default Topbar;

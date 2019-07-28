@@ -1,18 +1,24 @@
 import React from "react";
-
 import Button from "./Button";
+import side_bar_buttons from '../Data';
 
 const Sidebar = props => {
+  var createButton = b => {
+    return (
+      <Button
+        key={b.text.toUpperCase()}
+        buttonClass={b.buttonClass}
+        buttonTextClass={b.buttonTextClass}
+        text={b.text}
+      />
+    );
+  };
+
   return (
     <div className="side-bar">
-      <Button buttonClass="btn" buttonTextClass="html txt" text="html" />
-      <Button buttonClass="btn" buttonTextClass="css txt" text="css" />
-      <Button buttonClass="btn" buttonTextClass="js txt" text="js" />
-      <Button
-        buttonClass="preview- btn"
-        buttonTextClass="preview txt"
-        text="preview"
-      />
+      {side_bar_buttons.map(button => {
+        return createButton(button);
+      })}
     </div>
   );
 };

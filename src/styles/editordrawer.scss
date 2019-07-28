@@ -1,0 +1,27 @@
+.editor-drawer {
+    display: flex;
+    flex-direction: column;
+    width        : 450px;
+    max-height: 587px;
+    border-top   : 2px solid $_shark;
+    border-bottom: 4px solid $_shark;
+    background   : $_shark;
+    transition   : width 2s;
+    box-shadow: 4px 0px 5px rgba(0,0,0,.4);
+    padding:10px;
+    textarea{
+        margin-bottom: 10px;
+        background: darken($_shark, 1%);
+        height:100%;
+        max-height:100%;
+        resize: none;
+        border:none;
+        color:$lambda_orange;
+        font-size: 1.2rem;
+    }
+
+}
+
+.close {
+    width: 0;
+}
