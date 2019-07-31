@@ -1,29 +1,84 @@
-.editor-drawer {
+.start-container {
     display       : flex;
     flex-direction: column;
-    max-height   : 587px;
-    border-top   : 2px solid $_shark;
-    border-bottom: 4px solid $_shark;
-    background   : $_shark;
-    transition   : width 2s;
-    box-shadow   : 4px 0px 5px rgba(0, 0, 0, .4);
-    padding      : 10px;
+    width         : 600px;
+    height:570px;
+    .editor-drawer {
+        z-index            : 9;
+        background         : transparent;
+        box-shadow         : 2px 3px 8px 2px rgba(0, 0, 0, .4);
+        padding            : 10px;
+        background-color   : $_shark;
+        border-radius      : 2%;
 
-    .editor-field {
-        width        : 450px;
-        height       : 100%;
-        margin-bottom: 10px;
-        background   : darken($_shark, 1%);
-        height       : 100%;
-        max-height   : 100%;
-        resize       : none;
-        border       : none;
-        color        : $lambda_orange;
-        font-size    : 1.2rem;
+        .editor-box {
+            height: 100%;
+            .title-bar {
+                width     : 100%;
+                background: black;
+
+                p {
+                    color        : orange;
+                    font-size    : 1.4rem;
+                    text-align   : center;
+                    padding-left: 1rem;
+                }
+            }
+
+            .editor-field {
+                height:90px;
+                font-size    : 1.2rem;
+                max-width    : 94.6%;
+                min-width    : 94.6%;
+                background   : darken($_shark, 5%);
+                color        : $lambda_orange;
+                border       : none;
+                outline      : none;
+                resize       : both;
+                padding      : 1rem;
+
+
+            }
+
+            textarea::-webkit-scrollbar {
+                width           : 12px;
+                background-color: $_shark;
+            }
+
+            textarea::-webkit-scrollbar-thumb {
+                border-radius   : 10px;
+                background-color: darken($_shark, 2%);
+                box-shadow      : 0px -2px 3px rgba(0, 0, 0, .4);
+            }
+        }
+
+        .close {
+            display: none;
+        }
+        &.html{
+         
+        }
     }
+
 
     .close {
-        display: none;
-        width: 0;
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0);
+
     }
+
+
+    .drag {
+        cursor    : grabbing;
+        background: orange;
+    }
+}
+
+
+.preview{
+    position: fixed;
+    bottom:0px;
+    right:0px;
+    height:89%;
+    width:94.5%;
 }

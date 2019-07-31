@@ -11,22 +11,20 @@
     display       : flex;
     flex-direction: column;
 }
-   
+
 .middle {
     z-index: 0;
     display: flex;
 }
 
-   
-
-    .banner-bottom {
-        z-index: 0;
-        width     : 100%;
-        height    : 3%;
-        position  : fixed;
-        bottom    : 0;
-        background: $_lite_shark;
-    }
+.banner-bottom {
+    z-index   : 0;
+    width     : 100%;
+    height    : 3%;
+    position  : fixed;
+    bottom    : 0;
+    background: $_lite_shark;
+}
 
 
 .btn {
@@ -35,7 +33,7 @@
 
     &:hover {
         background: darken($_shark, 2%);
-        
+
 
         .txt {
 
@@ -49,20 +47,4 @@
 .txt {
     color      : $_lavander;
     font-weight: bold;
-  
-
 }
-
-/* ::COLORS_KEY::{
-    @pale-blue-magenta: #BB86FC;
-    @deep-purple      : #3700b3;
-    @vivid-cyan       : #03DAC6 ;
-
-    @blue_90: #ccd9ff;
-    @blue_70: #353844;
-
-    @blue_50: #1a1b1f;
-
-    @blue_30: #1d1e22;
-    @blue_10: #1e1f26;
-  } */

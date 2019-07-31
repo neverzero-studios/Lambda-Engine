@@ -1,12 +1,24 @@
 import React from "react";
 import Button from "./Button";
+import TopBar_data from '../Data/TB_DATA'
 
-const Topbar = (props) => {
+function Topbar(props) {
+  var createButton = b => {
+    return (
+      <Button
+        key={b.text.toUpperCase()}
+        buttonClass={b.buttonClass}
+        buttonTextClass={b.buttonTextClass}
+        text={b.text}
+        imgsrc={b.imgsrc}
+      />
+    );
+  };
   return (
     <div className={props.panelName}>
-        <Button buttonClass="btn exit" buttonTextClass="txt" text="exit" />
-        <Button buttonClass="btn run" buttonTextClass="txt" text="run" />
-        <Button buttonClass="btn run" buttonTextClass="txt" text="save" />
+      {TopBar_data.map(button => {
+        return createButton(button);
+      })}
     </div>
   )
 };

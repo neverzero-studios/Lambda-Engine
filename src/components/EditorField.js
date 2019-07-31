@@ -1,16 +1,21 @@
 import React from "react";
 
-class EditorField extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <textarea className={this.props.className}
-      id={this.props.id}
-       />
-    );
-  }
+function EditorField(props) {
+  return (
+    <div className={props.containerName}>
+      <div className={props.titleBar}>
+        <p>{props.tag}</p>
+      </div>
+      <textarea
+        onKeyDown={e => {
+          if (e.keyCode === 9) {
+            e.preventDefault();
+          }
+        }}
+        className={props.className}
+        id={props.id}
+      />
+    </div>
+  );
 }
-
 export default EditorField;

@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "./Button";
-import side_bar_buttons from '../Data';
+import side_bar_buttons from '../Data/SB_DATA';
 
-const Sidebar = props => {
+function Sidebar(props) {
   var createButton = b => {
     return (
       <Button
@@ -10,6 +10,7 @@ const Sidebar = props => {
         buttonClass={b.buttonClass}
         buttonTextClass={b.buttonTextClass}
         text={b.text}
+        imgsrc={b.imgsrc}
       />
     );
   };

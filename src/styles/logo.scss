@@ -1,11 +1,11 @@
 .logo {
     z-index: 2;
     padding   : .3rem;
-    width     : 2.5%;
+    width     : 4.2%;
     border    : 2px solid darken($_shark, 2%);
     box-shadow: 4px -3px 5px rgba(0, 0, 0, .4);
     background:$_shark;
-
+    
     &:hover {
         background: radial-gradient($lambda_orange 18%, darken($_shark, 2%),$_shark, $_shark);
     }
